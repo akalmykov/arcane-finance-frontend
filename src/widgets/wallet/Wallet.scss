@@ -1,0 +1,32 @@
+.wallet {
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 40px;
+
+    padding: 8px;
+
+    background: #1E2029;
+
+    font-family: "Inter";
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #FFF;
+
+    & svg, img {
+        width: 24px;
+        height: 24px;
+
+        margin-right: 8px;
+    }
+
+    &_connected {
+        cursor: default;
+        padding-right: 29px;
+    }
+}

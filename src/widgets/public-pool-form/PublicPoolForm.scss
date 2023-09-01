@@ -1,0 +1,71 @@
+.publicPoolForm {
+    
+    &-price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-bottom: 20px;
+
+        & .counter {
+            width: calc(50% - 6px);
+        }
+    }
+
+    &-details {
+        border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+        padding-top: 16px;
+        padding-right: 8px;
+        padding-left: 8px;
+
+        margin-bottom: 16px;
+
+        &Item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            &:first-child {
+                margin-bottom: 12px;
+
+                color: #18E48F;
+            }         
+            
+            &:last-child {
+                color: #FFF;
+            }    
+        }
+    }
+
+    &-token {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 16px;
+
+        & .swapButton {
+            position: absolute;
+            
+            right: 50px;
+        }
+
+        & .inputToken {
+            &:first-child {
+                margin-bottom: 10px;
+            }
+
+            &:last-child {
+                margin-top: 10px;
+            }
+        }
+    }
+
+}

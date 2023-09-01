@@ -1,0 +1,64 @@
+.chooseToken {
+    cursor: pointer;
+
+    border-radius: 16px;
+
+    background: #154BF9;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 12px;
+
+    height: 48px;
+
+    &:hover {
+        background: linear-gradient(90deg, #285BFD 0%, #00BFF9 100%);
+    }
+
+    &-token {
+        display: flex;
+        align-items: center;
+
+        &-icon {
+            display: flex;
+            margin-right: 8px;
+
+            & svg, img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &-label {
+            font-size: 16px;
+            font-weight: 600;
+
+            color: #FFF;
+
+            text-transform: uppercase;
+        }
+    }
+
+    &-choose {
+        font-size: 16px;
+        font-weight: 600;
+
+        color: #FFF;
+    }
+    
+    &_selected {
+        background: #262831;
+
+        &:hover {
+            background: #2E3039;
+        }
+    }
+
+    &-action {
+        display: flex;
+
+        margin-left: 16px;
+    }
+}

@@ -1,0 +1,31 @@
+.tradeForm {
+    width: 360px;
+
+    padding: 16px;
+
+    border-radius: 12px;
+    background: #1E2028;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        margin-bottom: 16px;
+
+        & svg {
+            cursor: pointer;
+        }
+    }
+
+    
+    & .switch {
+        margin-bottom: 10px;
+    }
+
+
+    & .faucetBanner {
+        margin-top: 20px;
+    }
+
+}

@@ -1,0 +1,30 @@
+.button {
+    cursor: pointer;
+    
+    border-radius: 28px;
+    background: #154BF9;
+
+    font-family: "Inter";
+
+    font-size: 18px;
+    font-weight: 600;
+
+    text-align: center;
+
+    color: #FFF;
+
+    border: none;
+    outline: none;
+
+    width: 100%;
+    height: 56px;
+
+    &:disabled {
+        cursor: default;
+        background: #4B4D54;
+    }
+
+    &:not(:disabled):hover {
+        background: linear-gradient(90deg, #285BFD 0%, #00BFF9 100%);
+    }
+}

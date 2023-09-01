@@ -1,0 +1,31 @@
+.navigation {
+    display: flex;
+    align-items: center;
+
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #FFF;
+
+    &-item {
+        text-decoration: none;
+        
+        cursor: pointer;
+        
+        &:not(:last-child) {
+            margin-right: 32px;
+        }
+
+        color: rgba(255, 255, 255, 0.60);
+        
+        &_selected {
+            color: #fff;
+        }
+
+        &_disabled {
+            cursor: default;
+
+        }
+    }
+}

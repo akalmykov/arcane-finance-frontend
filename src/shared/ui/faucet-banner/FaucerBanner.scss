@@ -1,0 +1,35 @@
+.faucetBanner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.30);
+
+    padding: 10px 0px 10px 22px;
+    border: 1px solid #285BFD;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    &-title {
+        font-size: 18px;
+        font-weight: 500;
+        font-style: normal;
+
+        background: var(--tto, linear-gradient(90deg, #285BFD 0%, #00BFF9 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        margin-bottom: 6px;
+    }
+
+    &-subtitle {
+        font-size: 12px;
+        font-weight: 400;
+
+        color: var(--white, #FFF);
+    }
+}

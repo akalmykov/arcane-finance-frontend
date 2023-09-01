@@ -1,0 +1,22 @@
+.tabs {
+    display: flex;
+    align-items: center;
+
+    &-item {
+        cursor: pointer;
+
+        padding: 16px;
+        
+        text-align: center;
+        font-size: 13px;
+        font-weight: 600;
+
+        color: #FFF;
+
+        &_selected {
+            color: #0075FF;
+
+            border-bottom: 1px solid #0075FF;
+        }
+    }
+}

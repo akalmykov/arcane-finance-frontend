@@ -1,0 +1,117 @@
+.chooseTradeTokenModal {
+    position: relative;
+
+    width: 480px;
+    max-width: 100%;
+
+    padding: 24px 20px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: #1E2029;
+
+    margin-bottom: 30%;
+
+    &-container {
+        
+    }
+
+    &-title {
+        font-size: 20px;
+        font-weight: 600;
+
+        color: #FFF;
+
+        margin-bottom: 20px;
+    }
+
+    &-search {
+        position: relative;
+        
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 20px;
+
+        & svg {
+            position: absolute;
+
+            left: 16px;
+        }
+
+        & input {
+            width: 100%;
+
+            outline: none;
+            border: none;
+
+            border-radius: 16px;
+            background: #14171A;
+            
+            height: 48px;
+
+            padding-left: 52px;
+
+            font-family: "Inter";
+            font-size: 16px;
+            font-weight: 500;
+
+            color: #fff;
+
+            &::placeholder {
+                color: #4B4D54;
+            }
+        }
+    }
+
+    &-content {
+        display: flex;
+
+        flex-wrap: wrap;
+    }
+
+    &Token {
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        background: #262831;
+
+        padding: 10px;
+        padding-right: 16px;
+
+        margin-right: 16px;
+        margin-bottom: 16px;
+
+        &_selected {
+            border: 1px solid rgba(21, 75, 249, 0.60);
+            background: rgba(21, 75, 249, 0.10);
+        }
+
+        &:not(.chooseTokenModalToken_selected):hover {
+            background: #2E3039;
+        }
+
+        &-icon {
+            display: flex;
+            
+            margin-right: 8px;
+
+            & svg, img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &-label {
+            font-size: 16px;
+            font-weight: 500;
+
+            color: var(--white, #FFF);
+
+            text-transform: uppercase;
+        }
+    }
+}

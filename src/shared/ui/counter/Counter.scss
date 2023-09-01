@@ -1,0 +1,90 @@
+.counter {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: #14171A;
+
+    padding: 12px;
+
+    user-select: none;
+
+    &-head,
+    &-foot {
+        // font-family: Inter;
+        font-size: 12px;
+
+        font-weight: 400;
+
+        text-align: center;
+
+        color: rgba(255, 255, 255, 0.60);
+    }
+
+    &-head {
+        margin-bottom: 9px;
+    }
+
+    &-foot {
+        margin-top: 9px;
+    }
+
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+    }
+
+    &-action {
+        cursor: pointer;
+
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        
+        width: 24px;
+        height: 24px;
+        padding: 3px;
+        
+        flex-shrink: 0;
+    
+        border-radius: 8px;
+        background: #262831;
+    }
+
+    &-field {
+        margin: 0px 9px;
+        
+        & input {
+            width: 100%;
+
+            border:none;
+            outline: none;
+            background-color: unset;
+            padding: 0;
+            margin: 0;
+
+            font-family: "Inter";
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            
+            color: #FFF;
+        
+            &::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            &[type=number] {
+                -moz-appearance: textfield;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.swapButton {
+    cursor: pointer;
+
+    border-radius: 16px;
+    background: #262831;
+
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 4px solid #14171A;
+
+    &:hover {
+        background: #2E3039;
+    }
+}

@@ -1,0 +1,25 @@
+.transactionLoader {
+    position: relative;
+
+    width: 480px;
+    max-width: 100%;
+
+    padding: 24px 20px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: #1E2029;
+
+    margin-bottom: 30%;
+
+    display: flex;
+    justify-content: center;
+
+    & svg {
+        width: 300px!important;
+
+        & path {
+            fill: #fff;
+            stroke: #fff;
+        }
+    }
+}
