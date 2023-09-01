@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# Arcane.Finance Front-end with Puzzle Wallet integration
+Arcane.finance is a decentralized exchange on Aleo that offers two major benefits:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- **Private swaps**. Users swap encrypted `Records` for encrypted `Records`.
+- **Zero slippage, no front-running**. Quotes are cryptographically signed so users trade with 100% price certainty.
 
-## Available Scripts
+## Demo Video
+https://www.youtube.com/watch?v=_nNIw9ClwjE
 
-In the project directory, you can run:
+## Live demo
+http://dev.arcane.finance
 
-### `npm start`
+## Motivation: classic AMMs and Aleo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Constant function Automated Market Makers (AMMs), such as Uniswap or Curve, are perhaps the most integral part of the traditional DeFi ecosystem.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+While having many advantages, AMMs on Aleo cannot fully utilize the core privacy-enabling primitives of Aleo: off chain `transition` functions and encrypted `Records`. Because an AMM needs to know up-to-date pool reserves, most of its code has to be placed in a `finalize` function, which is executed on chain and cannot operate on `Records`. This can fixed by relaxing constraints on price function invariant, but this introduce new challenges e.g. with correct handling of slippage. 
 
-### `npm test`
+For the Aleo ecosystem to grow and be competitive, its decentralized exchanges need to leverage unique privacy-preserving features of Aleo and off-chain computation. This is why we are building a DEX on an entirely different model called "Request-For-Quote" (RFQ).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What is a Request-For-Quote?
 
-### `npm run build`
+Request-for-quote (RFQ) is a form of P2P swaps. Our protocol offers users OTC (over-the-counter) desk experience, but automated, private and cryptographically signed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Here’s traditional how OTC trades work:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. You ask the seller: “Hey, I want to trade my 10 BTC for USDT.”
+2. She responds with an offer: “260,079 USDT. Take it or leave it.”
+3. If you like the offer, you execute the trade.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Now imagine that you receive cryptographically signed quotes from several sellers, automatically pick the best deal and can execute the trade immediately if you like it. And all this while remaining private. Sounds good? This is exactly how our RFQ DEX works.
 
-### `npm run eject`
+In a nutshell, an AMM pricing function `x*y=k` is now replaced with a cryptographically signed, private quote, which is verified off chain, in a `transition`. The pricing is done off chain but the trade is executed on chain.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Some examples of DeFi projects that use RFQ model are: [Hashflow](https://www.hashflow.com/), [Orbiter Finance](https://www.orbiter.finance/), [Hop](https://hop.exchange/), [Airswap](www.airswap.io) 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How can an RFQ DEX benefit the Aleo Ecosystem?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+While this project is an early stage Proof-of-Concept, it already shows that Aleo enables building privacy-preserving DeFi protocols that have real competitive advantages over existing solutions.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+There are other considerations behind our choice of RFQ model on Aleo:
 
-## Learn More
+1. Institutional Adoption
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+RFQ model is rooted in traditional financial markets. The adoption of RFQ mechanics can attract to Aleo more sophisticated, institutional participants, with deep liquidity and diverse assets.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Expansion to Other Asset Classes
+   
+RFQ-based execution engines are extremely flexible and can easily be expanded to accommodate derivatives and other financial instruments.
+
+5. Transformation to Dark Pools
+   
+Our long term vision includes an extension to RFQ model that would allow for completely trustless, but fully regulated dark pools. This will provide additional liquidity and anonymity for trading large blocks of securities without incurring market impact costs.
+
+## Contract
+Contract source code can be found here: https://github.com/akalmykov/rfq-aleo-dex
+
